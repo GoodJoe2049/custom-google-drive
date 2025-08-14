@@ -1,0 +1,13 @@
+{
+  "name": "Chromatic Google Docs",
+  "description": "Custom color themes for your google docs view",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "./assets/dark_mode.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
