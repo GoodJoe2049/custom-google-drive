@@ -5,7 +5,7 @@ const THEMES = {
       SURROUNDING: 'rgb(56, 56, 56)',
       SECONDARY: '',
       SHEET: '',
-      TEXT: ''
+      TEXT: 'rgba(223, 223, 223, 1)'
     },
   },
 };
@@ -30,8 +30,11 @@ document.getElementById('changeColorBtn').addEventListener('click', () => {
 function setColors(theme) {
   document.getElementsByClassName('kix-appview-editor')[0].style.backgroundColor = theme.SURROUNDING;
   document.getElementById('docs-chrome').style.background = theme.SURROUNDING; //container changes back on scroll
-  console.log(document.getElementsByClassName('kix-canvas-tile-content')[0].getContext('2d'))
-  const pageCanvas = document.getElementsByClassName('kix-canvas-tile-content')[0].getContext('2d');
-  pageCanvas.fillStyle = 'black';
-  pageCanvas.fillRect(0, 0, pageCanvas.width, pageCanvas.height); //can't get page to change color
+  document.getElementsByClassName('docs-titlebar-buttons')[0].style.backgroundColor = theme.SURROUNDING;
+  //document.getElementsByClassName('.kix-page-paginated')[0].style.color = theme.TEXT;
+  // var doc = DocumentApp.openById('1vr0Ju8Mr617oZ6-F7nS9FNNk8_Cz_cO09S4jK7Tm0PE');
+  // console.log(doc)
 }
+
+//https://developers.google.com/workspace/docs/api/how-tos/overview
+//https://developers.google.com/apps-script/reference/document
